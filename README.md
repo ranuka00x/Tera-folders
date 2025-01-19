@@ -72,31 +72,39 @@ Create a .env file in the root of the repository with the following structure:
 dotenv
 CopyEdit
 # Root directory where the folder structure will be created
-ROOT_FOLDER=/path/to/your/root/directory
+
+      ROOT_FOLDER=/path/to/your/root/directory
 
 # Enable or disable environments
-production=yes
-staging=no
-dev=yes
+
+      production=yes
+      staging=no
+      dev=yes
+      
 •	Replace /path/to/your/root/directory with the desired root folder (e.g., /var/www/project1).
 •	Set yes or no for production, staging, and dev to control which environments are created.
+
 3. Run the Script
-Execute the Python script to generate the folder structure:
-bash
-CopyEdit
-python create_terraform_structure.py
-4. Verify the Structure
-The Terraform folder structure will be created under <ROOT_FOLDER>/infra/.
+   
+      Execute the Python script to generate the folder structure:
+      bash
+      CopyEdit
+      python create_terraform_structure.py
+   
+5. Verify the Structure
+   
+      The Terraform folder structure will be created under <ROOT_FOLDER>/infra/.
 ________________________________________
 Example Output
-Given the following .env file:
-dotenv
-CopyEdit
-ROOT_FOLDER=/var/www/project1
-production=yes
-staging=no
-dev=yes
-The script will create the folder structure under /var/www/project1/infra/, including prod and dev environments but excluding staging.
+
+      Given the following .env file:
+      dotenv
+      CopyEdit
+      ROOT_FOLDER=/var/www/project1
+      production=yes
+      staging=no
+      dev=yes
+      The script will create the folder structure under /var/www/project1/infra/, including prod and dev environments but excluding staging.
 ________________________________________
 Customization
 You can customize the script by modifying the FOLDER_STRUCTURE dictionary in the create_terraform_structure.py file to add new modules, files, or environments as needed.
